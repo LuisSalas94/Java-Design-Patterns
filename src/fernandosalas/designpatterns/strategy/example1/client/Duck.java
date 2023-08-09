@@ -10,6 +10,15 @@ public abstract class Duck {
     public Duck() {
     }
 
+    // Setting Behavior dynamically
+    public void setFlyBehavior(FlyBehavior flyBehavior) {
+        this.flyBehavior = flyBehavior;
+    }
+
+    public void setQuackBehavior(QuackBehavior quackBehavior) {
+        this.quackBehavior = quackBehavior;
+    }
+
     // Add two public methods that delegate the behavior classes
     public void performFly() {
         flyBehavior.fly();
@@ -18,5 +27,7 @@ public abstract class Duck {
     public void performQuack() {
         quackBehavior.quack();
     }
+
+    abstract void display();
 
 }

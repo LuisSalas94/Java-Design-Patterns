@@ -9,7 +9,9 @@ public class MallardDuck extends Duck{
         flyBehavior = new FlyWithWings();
     }
 
-    public void display() {
+    @Override
+    void display() {
         System.out.println("I'm a real Mallard Duck 🦆");
     }
+
 }
